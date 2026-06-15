@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>ورود به سایت</title>
+
+<style>
+
+body{
+font-family:tahoma;
+background:#e0f2fe;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.login{
+background:white;
+padding:30px;
+width:350px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,.2);
+}
+
+h2{
+text-align:center;
+color:#2563eb;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:10px;
+border:1px solid #ccc;
+border-radius:5px;
+box-sizing:border-box;
+}
+
+button{
+width:100%;
+padding:10px;
+margin-top:15px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+#error{
+color:red;
+margin-top:10px;
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login">
+
+<h2>ورود به سایت</h2>
+
+<input type="text" id="username" placeholder="نام کاربری">
+
+<input type="password" id="password" placeholder="رمز عبور">
+
+<button onclick="login()">ورود</button>
+
+<div id="error"></div>
+
+</div>
+
+<script>
+
+function login(){
+
+let user=document.getElementById("username").value;
+let pass=document.getElementById("password").value;
+
+if(user=="amir" && pass=="1234"){
+
+localStorage.setItem("login","true");
+
+window.location.href="home.html";
+
+}else{
+
+document.getElementById("error").innerHTML=
+"نام کاربری یا رمز عبور اشتباه است";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

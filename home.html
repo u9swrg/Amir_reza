@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>صفحه اصلی</title>
+
+<script>
+
+if(localStorage.getItem("login")!="true"){
+
+window.location.href="index.html";
+
+}
+
+function logout(){
+
+localStorage.removeItem("login");
+
+window.location.href="index.html";
+
+}
+
+</script>
+
+<style>
+nav{
+background:#2563eb;
+padding:12px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:yellow;
+}    
+
+body{
+margin:0;
+font-family:tahoma;
+background:#f4f6f9;
+}
+
+header{
+background:#1e3a8a;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.1);
+margin-top:20px;
+}
+
+button{
+background:red;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+img{
+width:180px;
+border-radius:50%;
+display:block;
+margin:auto;
+}
+
+footer{
+margin-top:30px;
+background:#1e3a8a;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<nav>
+
+<a href="home.html">خانه</a>
+
+<a href="about.html">درباره من</a>
+
+<a href="gallery.html">گالری</a>
+
+<a href="interests.html">علاقه مندی ها</a>
+
+</nav>    
+
+<h1> امیررضا احمدنسب </h1>
+
+<p>ورود موفق</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+
+<h2>سلام👋</h2>
+
+<p>
+به سایت شخصی من خوش امدید.
+</p>
+
+<br>
+
+<button onclick="logout()">
+خروج
+</button>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Amir
+
+</footer>
+
+</body>
+</html>
